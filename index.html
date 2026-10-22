@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#12060a">
+<title>Thanh Do Store — Cửa hàng key kỹ thuật số</title>
+<style>
+:root{--bg:#0d0507;--panel:#1a0a0f;--panel2:#24101a;--line:#5a2530;--text:#fff1f1;--muted:#d0a4a8;--blue:#ff4d4d;--purple:#ff1f3d;--green:#6ee7b7;--shadow:0 22px 70px #0007}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 85% 20%,#4a0f17 0,transparent 35%),radial-gradient(ellipse at 10% 55%,#3a0a10 0,transparent 32%),var(--bg);color:var(--text);font:16px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}button{cursor:pointer}
+.wrap{width:min(1160px,calc(100% - 36px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:#0d0507dc;backdrop-filter:blur(18px);border-bottom:1px solid #4a2028}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:950;font-size:23px;letter-spacing:.5px;background:linear-gradient(100deg,#ff5e5e,#ff2e4d,#ff9a6b);color:transparent;background-clip:text}.navlinks{display:flex;gap:25px;color:var(--muted);font-weight:650}.navlinks a:hover{color:white}.navbtn{border:1px solid var(--line);border-radius:13px;padding:10px 15px;background:#2a1217;color:white}
+.hero{padding:78px 0 48px;text-align:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #6b2a33;background:#2a1217;border-radius:999px;padding:7px 13px;color:#ffc2c2;font-size:13px;font-weight:750}.dot{width:7px;height:7px;background:#6ee7b7;border-radius:50%;box-shadow:0 0 15px #6ee7b7}.hero h1{font-size:clamp(38px,6vw,68px);line-height:1.04;letter-spacing:-2.2px;margin:22px auto 18px;max-width:900px}.gradient{background:linear-gradient(95deg,#ff6a6a,#ff2e4d 52%,#ff8a5b);background-clip:text;color:transparent}.hero p{max-width:690px;margin:0 auto;color:var(--muted);font-size:18px}.perks{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:28px}.perk{border:1px solid #5a2530;background:#2a1217;border-radius:999px;padding:9px 14px;color:#ffd9d9;font-size:14px}
+.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:18px;margin:40px 0 22px}.sectionhead h2{font-size:clamp(27px,4vw,36px);margin:0;letter-spacing:-.7px}.sectionhead p{margin:5px 0 0;color:var(--muted)}.tag{color:#ff8a8a;font-size:12px;font-weight:800;letter-spacing:1px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.product{overflow:hidden;border:1px solid #4f2029;background:linear-gradient(150deg,#2a1217ee,#160709f5);border-radius:22px;box-shadow:var(--shadow);transition:transform .2s,border-color .2s}.product:hover{transform:translateY(-4px);border-color:#ff4d4d}.product-art{height:190px;position:relative;overflow:hidden;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 70%,#a01826 0,transparent 50%),linear-gradient(135deg,#2a1217,#0a0305)}.product-art:before,.product-art:after{content:"";position:absolute;border:1px solid #ff4d4d55;border-radius:50%;width:240px;height:240px;transform:rotate(-25deg)}.product-art:after{width:330px;height:130px;border-color:#ff8a5b55;transform:rotate(25deg)}.art-label{position:relative;z-index:1;font-weight:1000;font-size:clamp(27px,4vw,44px);letter-spacing:-1.6px;text-align:center;text-shadow:0 0 28px #ff2e4d99}.art-label small{display:block;font-size:10px;letter-spacing:4px;color:#ffb3b3;margin-top:4px}.product-body{padding:22px}.product-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.product h3{font-size:22px;margin:0;line-height:1.2}.pill{font-size:11px;white-space:nowrap;border:1px solid #7a2e3a;background:#3a1219;color:#ffb3b3;padding:5px 9px;border-radius:999px;font-weight:800}.desc{white-space:pre-line;color:var(--muted);min-height:52px;margin:12px 0 17px;font-size:14px}.features{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}.features span{font-size:12px;color:#ffd0d0;background:#2e1519;border-radius:8px;padding:5px 8px}.buyrow{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid #4a2028;padding-top:17px}.from{color:var(--muted);font-size:12px}.from strong{display:block;color:white;font-size:23px}.primary{border:0;color:white;font-weight:850;border-radius:13px;padding:12px 17px;background:linear-gradient(100deg,#e11d2e,#ff4d4d);box-shadow:0 9px 25px #ff1f3d44}.primary:hover{filter:brightness(1.12)}.secondary{border:1px solid var(--line);color:#ffe3e3;background:#2a1217;border-radius:12px;padding:11px 15px;font-weight:750}
+.trust{margin:55px 0 0;padding:25px;border:1px solid #4f2029;background:#1a0a0f;border-radius:20px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.trust strong{display:block;margin:6px 0}.trust p{margin:0;color:var(--muted);font-size:13px}.trust .emoji{font-size:23px}
+footer{border-top:1px solid #3f1c23;margin-top:60px;padding:28px 0 35px;color:var(--muted);font-size:13px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.overlay{position:fixed;inset:0;z-index:30;display:none;align-items:center;justify-content:center;padding:18px;background:#0a0204d9;backdrop-filter:blur(9px)}.overlay.open{display:flex}.modal{width:min(600px,100%);max-height:92vh;overflow:auto;background:#1a0a0f;border:1px solid #6b2a33;border-radius:24px;box-shadow:0 35px 100px #000b;padding:25px}.modalhead{display:flex;justify-content:space-between;align-items:start;gap:16px}.modal h2{font-size:26px;line-height:1.2;margin:0}.close{border:0;background:#3a1219;color:#ffe3e3;border-radius:10px;width:38px;height:38px;font-size:23px}.modal-sub{white-space:pre-line;color:var(--muted);font-size:14px;margin:12px 0 18px}.plans{display:grid;gap:10px}.plan{display:flex;align-items:center;justify-content:space-between;gap:12px;text-align:left;width:100%;border:1px solid #5a2530;border-radius:13px;background:#12060a;color:#fff1f1;padding:14px 15px}.plan:hover,.plan.selected{border-color:#ff4d4d;background:#4a121c}.plan strong{font-size:16px}.plan em{font-style:normal;color:#ff8a8a;font-weight:850;white-space:nowrap}.qrbox{display:none;margin-top:18px;padding:17px;border:1px solid #5a2530;border-radius:16px;background:#12060a;text-align:center}.qrbox.show{display:block}.qrimage{width:min(280px,100%);aspect-ratio:1;object-fit:contain;background:white;border-radius:12px;padding:8px;margin:12px auto}.qrplaceholder{width:230px;height:230px;margin:12px auto;display:grid;place-items:center;border:1px dashed #a05560;border-radius:14px;color:#e0b0b5;padding:20px}.hint{color:var(--muted);font-size:12px}.field{display:block;margin:12px 0 5px;color:#ffd9d9;font-size:13px;font-weight:700}.input{width:100%;border:1px solid #6b2a33;border-radius:11px;background:#12060a;color:white;padding:12px;outline:none}.input:focus{border-color:#ff4d4d}.admin{margin:50px 0 0;border:1px dashed #6b2a33;border-radius:18px;padding:20px;background:#12060a}.admin summary{cursor:pointer;font-weight:800}.admin-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.admin .hint{margin-top:12px}
+@media(max-width:720px){.nav{min-height:68px}.navlinks{display:none}.hero{padding:55px 0 28px}.grid{grid-template-columns:1fr}.product-art{height:165px}.sectionhead{align-items:start;flex-direction:column}.trust{grid-template-columns:1fr;gap:17px}.product-body{padding:18px}.admin-grid{grid-template-columns:1fr}.modal{padding:20px}.buyrow{align-items:end}}
+
+.support{position:fixed;right:18px;bottom:18px;z-index:20;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.support-btn{width:58px;height:58px;border-radius:50%;border:0;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,#e11d2e,#ff4d4d);box-shadow:0 10px 30px #ff1f3d66;transition:transform .15s}
+.support-btn:hover{transform:scale(1.08)}
+.support-btn svg{width:30px;height:30px}
+.support-menu{display:none}.support-menu.open{display:block}
+.support-link{display:block;padding:12px 22px;border-radius:14px;background:#1a0a0f;border:1px solid #ff4d4d;color:#fff;font-weight:850;box-shadow:0 10px 30px #000a}
+.support-link:hover{background:#4a121c}
+.qr-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:12px}
+.confirm-notice{display:none;margin-top:14px;padding:13px 15px;border:1px solid #ff4d4d;background:#4a121c;border-radius:12px;color:#fff;font-weight:700;font-size:14px}
+.confirm-notice.show{display:block}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#">Thanh Do Store</a>
+<nav class="navlinks"><a href="#home">Trang chủ</a><a href="#products">Sản phẩm</a><a href="#guide">Hướng dẫn</a></nav>
+<a class="navbtn" href="#products">Chọn key ↗</a>
+</div></header>
+<main class="wrap">
+<section class="hero" id="home">
+<div class="eyebrow"><span class="dot"></span> CỬA HÀNG KEY KỸ THUẬT SỐ</div>
+<h1>Key bản quyền &<br><span class="gradient">kỹ thuật số</span></h1>
+<p>Chọn đúng sản phẩm, chọn thời hạn phù hợp và tạo mã QR để thanh toán. Giao diện đơn giản, nhanh chóng trên cả điện thoại và máy tính.</p>
+<div class="perks"><span class="perk">⚡ Chọn gói nhanh</span><span class="perk">🔐 Thông tin rõ ràng</span><span class="perk">📲 QR thanh toán</span><span class="perk">💬 Hỗ trợ khách hàng</span></div>
+</section>
+<section id="products">
+<div class="sectionhead"><div><div class="tag">DANH MỤC CỬA HÀNG</div><h2>Sản phẩm nổi bật</h2><p>Chọn sản phẩm để xem các gói key và giá bán.</p></div><span class="pill">04 SẢN PHẨM</span></div>
+<div class="grid" id="productGrid"></div>
+</section>
+<section class="trust" id="guide">
+<div><div class="emoji">🛒</div><strong>Chọn gói phù hợp</strong><p>Mỗi sản phẩm có thời hạn và mức giá riêng để bạn dễ lựa chọn.</p></div>
+<div><div class="emoji">📷</div><strong>Quét mã QR</strong><p>Sau khi chọn gói, nhấn tạo mã QR để xem mã thanh toán bạn đã cấu hình.</p></div>
+<div><div class="emoji">💬</div><strong>Hỗ trợ sau mua</strong><p>Liên hệ Thanh Do Store để được hỗ trợ nhanh chóng sau khi thanh toán.</p></div>
+</section>
+</main>
+<footer><div class="wrap foot"><span>© <span id="year"></span> Thanh Do Store · Digital Store</span><span>Vui lòng kiểm tra đúng thông tin thanh toán trước khi chuyển tiền.</span></div></footer>
+
+<div class="overlay" id="buyOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+<div class="modal">
+<div class="modalhead"><div><div class="tag">ĐẶT MUA SẢN PHẨM</div><h2 id="modalTitle">Chọn gói key</h2></div><button class="close" onclick="closeModal()" aria-label="Đóng">×</button></div>
+<p class="modal-sub" id="modalDesc">Chọn thời hạn bạn muốn mua.</p>
+<div class="plans" id="plans"></div>
+<div class="qrbox" id="qrbox"><strong id="qrTitle">Mã QR thanh toán</strong><div id="qrContent"></div><p class="hint" id="qrNote">Quét mã bằng ứng dụng ngân hàng. Kiểm tra số tiền và nội dung trước khi thanh toán.</p><div class="confirm-notice" id="confirmNotice">✅ Vui lòng gửi bill ck kèm tên tk cho admin. Liên hệ admin ở góc dưới bên phải.</div>
+<div class="qr-actions"><button class="primary" id="confirmBtn" onclick="confirmPaid()">Xác nhận đã bank</button><button class="secondary" onclick="resetQr()">Chọn gói khác</button></div></div>
+</div></div>
+<div class="support">
+<div class="support-menu" id="supportMenu"><a class="support-link" href="https://zalo.me/0846260109" target="_blank" rel="noopener">Admin</a></div>
+<button class="support-btn" id="supportBtn" aria-label="Hỗ trợ" aria-expanded="false" onclick="toggleSupport()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></button>
+</div>
+<script>
+/* ============================================================
+   ★ CHỖ NHẬP LINK ẢNH — CHỈ CẦN SỬA TRONG KHU VỰC NÀY ★
+   - imageUrl : link ảnh sản phẩm (để '' nếu muốn dùng ảnh chữ mặc định)
+   - qr       : link ảnh QR thanh toán cho TỪNG GÓI (tên gói phải khớp với tên gói bên dưới)
+   ============================================================ */
+const IMAGES = {
+  novax: {
+    imageUrl: 'https://cdn.upanhlaylink.com/i/AwveObud.jpeg',
+    qr: {
+      '1 giờ':   'https://img.vietqr.io/image/970422-0846260109-compact2.png?amount=7000&addInfo=novax+cilent+1h&accountName=LE+THANH+DO',
+      '1 ngày':  'https://img.vietqr.io/image/970422-0846260109-compact2.png?amount=20000&addInfo=novax+cilent+1+ngay&accountName=LE+THANH+DO',
+      '1 tuần':  'https://img.vietqr.io/image/970422-0846260109-compact2.png?amount=90000&addInfo=novax+cilent+1+tuan&accountName=LE+THANH+DO',
+      '1 tháng': 'https://img.vietqr.io/image/970422-0846260109-compact2.png?amount=180000&addInfo=novax+cilent+1+thang&accountName=LE+THANH+DO'
+    }
+  },
+  delta: {
+    imageUrl: 'https://cdn.upanhlaylink.com/i/nJxJVBVp.jpeg',
+    qr: {
+      '1 ngày':  'https://img.vietqr.io/image/970422-0846260109-compact2.png?amount=25000&addInfo=delta+prx+1+ngay&accountName=LE+THANH+DO',
+      '1 tuần':  'https://img.vietqr.io/image/970422-0846260109-compact2.png?amount=90000&addInfo=delta+prx+1+tuan&accountName=LE+THANH+DO',
+      '1 tháng': 'https://img.vietqr.io/image/970422-0846260109-compact2.png?amount=180000&addInfo=delta+prx+1+thang&accountName=LE+THANH+DO'
+    }
+  },
+  innova: {
+    imageUrl: 'https://cdn.upanhlaylink.com/i/lF4D1N2p.jpeg',
+    qr: {
+      '1 ngày':  'https://img.vietqr.io/image/970422-0846260109-compact2.png?amount=20000&addInfo=innova+cheat+1+ngay&accountName=LE+THANH+DO',
+      '1 tuần':  'https://img.vietqr.io/image/970422-0846260109-compact2.png?amount=90000&addInfo=innova+cheat+1+tuan&accountName=LE+THANH+DO',
+      '1 tháng': 'https://img.vietqr.io/image/970422-0846260109-compact2.png?amount=180000&addInfo=innova+cheat+1+thang&accountName=LE+THANH+DO'
+    }
+  },
+  novaxproxy: {
+    imageUrl: 'https://cdn.upanhlaylink.com/i/d2FB8Rwf.jpeg',
+    qr: {
+      '1 ngày':  'https://img.vietqr.io/image/970422-0846260109-compact2.png?amount=20000&addInfo=novax+prx+1+ngay&accountName=LE+THANH+DO',
+      '1 tuần':  'https://img.vietqr.io/image/970422-0846260109-compact2.png?amount=90000&addInfo=novax+prx+1+tuan&accountName=LE+THANH+DO',
+      '1 tháng': 'https://img.vietqr.io/image/970422-0846260109-compact2.png?amount=120000&addInfo=novax+prx+1+thang&accountName=LE+THANH+DO',
+      'Vĩnh Viễn': 'https://img.vietqr.io/image/970422-0846260109-compact2.png?amount=220000&addInfo=novax+prx+vinh+vien&accountName=LE+THANH+DO',
+      'Vĩnh Viễn có Bảo Hành': 'https://img.vietqr.io/image/970422-0846260109-compact2.png?amount=270000&addInfo=novax+prx+vinh+vien+co+bao+hanh&accountName=LE+THANH+DO'
+    }
+  }
+};
+/* QR dự phòng cho gói nào chưa có link riêng (có thể để trống) */
+const DEFAULT_QR_URL = '';
+/* ============================================================ */
+
+const products = [
+ {id:'novax',name:'Novax Client + Android + iOS',short:'NOVAX',badge:'ĐA NỀN TẢNG',desc:'Aim Neck, định vị Moco , keo ngược • Hỗ trợ ios và android.',features:['Client','Android','iOS'],plans:[['1 giờ',7000],['1 ngày',20000],['1 tuần',90000],['1 tháng',180000]]},
+ {id:'delta',name:'Delta Prx',short:'DELTA PRX',badge:'PHỔ BIẾN',desc:'ALL IOS',features:['Key kỹ thuật số','Nhiều thời hạn'],plans:[['1 ngày',25000],['1 tuần',90000],['1 tháng',180000]]},
+ {id:'innova',name:'Innova Cheat — iOS',short:'INNOVA',badge:'IOS',desc:'iOS 15.0–15.7.x\niOS 16.0–16.7.x\niOS 17.0–17.7.x\niOS 26.0–26.6.2\niOS 27.0 beta 1: build 24A5355q\niOS 27.0 beta 2: build 24A5370h\niOS 27.0 beta 3 / public beta 1: build 24A5380h\niOS 27.0 beta 4 / public beta 2: build 24A5390f',features:['iOS','Kích hoạt theo gói'],plans:[['1 ngày',20000],['1 tuần',90000],['1 tháng',180000]]},
+ {id:'novaxproxy',name:'Novax Proxy — iOS',short:'NOVAX PROXY',badge:'NHIỀU GÓI',desc:'iOS 15.0–15.7.x\niOS 16.0–16.7.x\niOS 17.0–17.7.x\niOS 26.0–26.6.2\niOS 27.0 beta 1: build 24A5355q\niOS 27.0 beta 2: build 24A5370h\niOS 27.0 beta 3 / public beta 1: build 24A5380h\niOS 27.0 beta 4 / public beta 2: build 24A5390f',features:['iOS','Có gói vĩnh viễn'],plans:[['1 ngày',20000],['1 tuần',90000],['1 tháng',120000],['Vĩnh Viễn',220000],['Vĩnh Viễn có Bảo Hành',270000]]}
+];
+products.forEach(p=>{const c=IMAGES[p.id]||{};p.imageUrl=c.imageUrl||'';p.qrMap=c.qr||{}});
+let activeProduct=null,activePlan=null;
+const money=n=>new Intl.NumberFormat('vi-VN').format(n)+'đ';
+function renderProducts(){
+ document.getElementById('productGrid').innerHTML=products.map(p=>`<article class="product">
+ <div class="product-art">${p.imageUrl?`<img src="${esc(p.imageUrl)}" alt="${esc(p.name)}" style="width:100%;height:100%;object-fit:cover">`:`<div class="art-label">${esc(p.short)}<small>KEY • DIGITAL PRODUCT</small></div>`}</div>
+ <div class="product-body"><div class="product-top"><h3>${esc(p.name)}</h3><span class="pill">${esc(p.badge)}</span></div>
+ <p class="desc">${esc(p.desc)}</p><div class="features">${p.features.map(f=>`<span>${esc(f)}</span>`).join('')}</div>
+ <div class="buyrow"><div class="from">Giá từ<strong>${money(Math.min(...p.plans.map(x=>x[1])))}</strong></div><button class="primary" onclick="openProduct('${p.id}')">Chọn gói →</button></div></div></article>`).join('');
+}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function openProduct(id){
+ activeProduct=products.find(p=>p.id===id);activePlan=null;
+ document.getElementById('modalTitle').textContent=activeProduct.name;
+ document.getElementById('modalDesc').textContent=activeProduct.desc;
+ document.getElementById('qrbox').classList.remove('show');hideConfirm();
+ document.getElementById('plans').innerHTML=activeProduct.plans.map((pl,i)=>`<button class="plan" onclick="choosePlan(${i})"><strong>${esc(pl[0])}</strong><em>${money(pl[1])}</em></button>`).join('');
+ document.getElementById('buyOverlay').classList.add('open');document.body.style.overflow='hidden';
+}
+function choosePlan(i){
+ hideConfirm();
+ activePlan=activeProduct.plans[i];
+ document.querySelectorAll('.plan').forEach((el,j)=>el.classList.toggle('selected',i===j));
+ document.getElementById('qrTitle').textContent='QR thanh toán · '+money(activePlan[1]);
+ const content=document.getElementById('qrContent');
+ const qrSrc=activeProduct.qrMap[activePlan[0]]||DEFAULT_QR_URL;
+ if(qrSrc){content.innerHTML=`<img class="qrimage" src="${esc(qrSrc)}" alt="Mã QR thanh toán" onerror="this.outerHTML='<div class=&quot;qrplaceholder&quot;>Không tải được ảnh QR.<br>Vui lòng liên hệ shop để được hỗ trợ.</div>'">`;}
+ else {content.innerHTML='<div class="qrplaceholder">📷<br><br>Chưa cài link ảnh QR<br><small>Shop chưa cập nhật ảnh QR, vui lòng liên hệ hỗ trợ.</small></div>';}
+ document.getElementById('qrNote').textContent='Sản phẩm: '+activeProduct.name+' · Gói: '+activePlan[0]+' · Số tiền: '+money(activePlan[1])+'. Vui lòng xác nhận thông tin trước khi chuyển khoản.';
+ document.getElementById('qrbox').classList.add('show');
+}
+function confirmPaid(){document.getElementById('confirmNotice').classList.add('show');const b=document.getElementById('confirmBtn');b.textContent='Đã xác nhận ✓';b.disabled=true;b.style.opacity='.7';b.style.cursor='default'}
+function hideConfirm(){document.getElementById('confirmNotice').classList.remove('show');const b=document.getElementById('confirmBtn');b.textContent='Xác nhận đã bank';b.disabled=false;b.style.opacity='';b.style.cursor=''}
+function resetQr(){hideConfirm();document.getElementById('qrbox').classList.remove('show');activePlan=null;document.querySelectorAll('.plan').forEach(el=>el.classList.remove('selected'))}
+function closeModal(){document.getElementById('buyOverlay').classList.remove('open');document.body.style.overflow=''}
+document.getElementById('buyOverlay').addEventListener('click',e=>{if(e.target.id==='buyOverlay')closeModal()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+function toggleSupport(){const m=document.getElementById('supportMenu');const o=m.classList.toggle('open');document.getElementById('supportBtn').setAttribute('aria-expanded',o)}
+document.addEventListener('click',e=>{if(!e.target.closest('.support'))document.getElementById('supportMenu').classList.remove('open')});
+renderProducts();document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body></html>
